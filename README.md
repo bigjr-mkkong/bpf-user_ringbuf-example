@@ -1,6 +1,6 @@
 # Example of how to use BPF_MAY_TYPE_USER_RINGBUF
 
-`BPF_MAP_TYPE_USER_RINGBUF` has been introduced in this [commit](https://lwn.net/Articles/908796/), but there aren't many examples except the one in [Linux kernel](https://elixir.bootlin.com/linux/latest/source/tools/testing/selftests/bpf/progs/user_ringbuf_success.c) This repo gives a simple example of how to use `BPF_MAP_TYPE_USER_RINGBUF`.
+`BPF_MAP_TYPE_USER_RINGBUF` has been introduced in this [commit](https://lwn.net/Articles/908796/), but there aren't many examples except the one in [Linux kernel](https://elixir.bootlin.com/linux/latest/source/tools/testing/selftests/bpf/progs/user_ringbuf_success.c). This repo gives a simple example of how to use `BPF_MAP_TYPE_USER_RINGBUF` to send data from userspace loader to kernel attached bpf program.
 
 Loader will load & attach a bpf program into the kernel(at tracepoint/syscalls/sys_enter_execve) and send some userspace magic number to attached bpf program using BPF_MAP_TYPE_USER_RINGBUF.
 
